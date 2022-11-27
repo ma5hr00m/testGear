@@ -93,4 +93,22 @@
    go run bot.go
    ```
 
-   
+
+
+
+## 基于`bot.go`学习`tgbotapi`&`Golang`
+
+### Go标准库log
+
+```go
+package main
+
+import "log"
+
+func main() {
+    log.Println("print")
+    log.Panicln("panic")
+    log.Fatalln("fatal")
+}
+```
+
