@@ -112,3 +112,25 @@ func main() {
 }
 ```
 
+
+
+> 功能规划
+>
+> - 命令合集
+>
+>   ```shell
+>   </ping>
+>   ping testGear
+>   </help>
+>   Querry all commands
+>   </hello>
+>   Say hello
+>   </comic>
+>   Query today's comic updates
+>   </weather city>
+>   Querry city weather
+>   </transl words>
+>   Translate Chinese to English
+>   </extract i>
+>   Extract paintings ( default 1, max 4 )
+>   ```

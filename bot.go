@@ -23,6 +23,7 @@ func main() {
 	u := tgbotapi.NewUpdate(0)
 	u.Timeout = 30
 
+	// Obtain the chats
 	updates := bot.GetUpdatesChan(u)
 
 	for update := range updates {
@@ -38,9 +39,10 @@ func main() {
 
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, "")
 
+		// Judgment execution statement
 		switch update.Message.Command() {
 		case "help":
-			msg.Text = "You can use the following command:\n/hello\n/ping"
+			msg.Text = "You can use the following command:\n/ping\n/help\n/hello\n/comic\n/weather\n/transl\n/extract"
 			log.Printf("Successfully execute /help command.")
 		case "hello":
 			msg.Text = ("Hello, " + update.Message.From.UserName + "!")
@@ -52,6 +54,7 @@ func main() {
 			continue
 		}
 
+		// panic notice
 		if _, err := bot.Send(msg); err != nil {
 			log.Panic(err)
 		}
